@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "exampledb",
+    "password": "sP!d10rman",
+    "database": "ufo_db",
     "host": "localhost",
     "dialect": "mysql"
   },

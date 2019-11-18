@@ -1,26 +1,24 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+  // Get all UFO reports
+  app.get("/api/ufos", function(req, res) {
+    db.Ufo.findAll({}).then(function(dbUfos) {
+      res.json(dbUfos);
     });
   });
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+  // Create a new UFO report
+  app.post("/api/ufos", function(req, res) {
+    db.Ufo.create(req.body).then(function(dbUfos) {
+      res.json(dbUfos);
     });
   });
 
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(
-      dbExample
-    ) {
-      res.json(dbExample);
+  // Delete a UFO report by id
+  app.delete("/api/ufos/:id", function(req, res) {
+    db.Ufo.destroy({ where: { id: req.params.id } }).then(function(dbUfos) {
+      res.json(dbUfos);
     });
   });
 };
