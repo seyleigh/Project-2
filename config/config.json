@@ -2,7 +2,11 @@
   "development": {
     "username": "root",
     "password": null,
+<<<<<<< HEAD
     "database": "exampledb",
+=======
+    "database": "ufo_db",
+>>>>>>> c7df759a18d5a826e2f1ce894395b2dbc81df71c
     "host": "localhost",
     "dialect": "mysql"
   },

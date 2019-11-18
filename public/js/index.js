@@ -12,19 +12,31 @@ var API = {
         "Content-Type": "application/json"
       },
       type: "POST",
+<<<<<<< HEAD
       url: "api/examples",
+=======
+      url: "api/ufos",
+>>>>>>> c7df759a18d5a826e2f1ce894395b2dbc81df71c
       data: JSON.stringify(example)
     });
   },
   getExamples: function() {
     return $.ajax({
+<<<<<<< HEAD
       url: "api/examples",
+=======
+      url: "api/ufos",
+>>>>>>> c7df759a18d5a826e2f1ce894395b2dbc81df71c
       type: "GET"
     });
   },
   deleteExample: function(id) {
     return $.ajax({
+<<<<<<< HEAD
       url: "api/examples/" + id,
+=======
+      url: "api/ufos/" + id,
+>>>>>>> c7df759a18d5a826e2f1ce894395b2dbc81df71c
       type: "DELETE"
     });
   }
