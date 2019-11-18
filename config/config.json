@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "sP!d10rman",
+    "password": null,
     "database": "ufo_db",
     "host": "localhost",
     "dialect": "mysql"
