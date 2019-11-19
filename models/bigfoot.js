@@ -25,9 +25,9 @@ module.exports = function (sequelize, DataTypes) {
         precip_type: DataTypes.STRING,
         pressure: DataTypes.DECIMAL(4, 2),
         summary: DataTypes.TEXT,
-        uv_index: DataTypes.INT,
+        uv_index: DataTypes.INTEGER,
         visibility: DataTypes.DECIMAL(2, 2),
-        wind_bearing: DataTypes.INT,
+        wind_bearing: DataTypes.INTEGER,
         wind_speed: DataTypes.DECIMAL(3, 2)
     });
     return Bigfoot;
