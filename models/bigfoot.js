@@ -20,7 +20,7 @@ module.exports = function (sequelize, DataTypes) {
         humidity: DataTypes.DECIMAL(2, 2),
         cloud_cover: DataTypes.DECIMAL(2, 2),
         moon_phase: DataTypes.DECIMAL(2, 2),
-        precip_intensity: DataTypes.DECIMAL(2, 3),
+        precip_intensity: DataTypes.DECIMAL(3, 3),
         precip_probability: DataTypes.DECIMAL(2, 2),
         precip_type: DataTypes.STRING,
         pressure: DataTypes.DECIMAL(4, 2),
