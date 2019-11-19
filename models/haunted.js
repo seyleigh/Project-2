@@ -14,4 +14,4 @@ module.exports = function (sequelize, DataTypes) {
         city_location: DataTypes.STRING
     });
     return Haunted;
-}
+};
