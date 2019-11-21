@@ -1,18 +1,14 @@
-module.exports = function (sequelize, DataTypes) {
-  var Ufo = sequelize.define("Ufo", {
+module.exports = function(sequelize, DataTypes) {
+  var nuforc_reports = sequelize.define("nuforc_reports", {
     summary: DataTypes.TEXT,
     city: DataTypes.STRING,
     state: DataTypes.STRING,
-    date_time: DataTypes.DATE,
     shape: DataTypes.STRING,
     duration: DataTypes.STRING,
     stats: DataTypes.TEXT,
-    report_link: DataTypes.STRING,
     text: DataTypes.TEXT,
-    posted: DataTypes.DATE,
     city_latitude: DataTypes.DECIMAL(4, 4),
-    city_longitude: DataTypes.DECIMAL(4, 4),
-    city_location: DataTypes.STRING
+    city_longitude: DataTypes.DECIMAL(4, 4)
   });
-  return Ufo;
+  return nuforc_reports;
 };
