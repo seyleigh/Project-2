@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "ufo_db",
+    "password": "Kashul1996!",
+    "database": "cryptids_db",
     "host": "localhost",
     "dialect": "mysql"
   },
