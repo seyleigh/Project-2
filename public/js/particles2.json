@@ -6,7 +6,7 @@
         "value": 10,
         "density": {
           "enable": false,
-          "value_area": 1500
+          "value_area": 1000
         }
       },
   
@@ -14,16 +14,16 @@
         "value": "#fff"
       },
       "shape": {
-        "type": "image",
+        "type": "circle",
         "stroke": {
-          "width": 30,
-          "color": "#000"
+          "width": 0,
+          "color": "#fff"
         },
         "polygon": {
           "nb_sides": 5
         },
         "image": {
-          "src": "https://www.iconsdb.com/icons/preview/white/rocket-xxl.png",
+          "src": "https://static.thenounproject.com/png/970227-200.png",
           "width": 100,
           "height": 100
         }
@@ -41,8 +41,8 @@
       },
   
       "size": {
-        "value": 25,
-        "random": false,
+        "value": 6,
+        "random": true,
         "anim": {
           "enable": false,
           "speed": 40,  
@@ -52,7 +52,7 @@
       },
   
       "line_linked": {
-        "enable": false,
+        "enable": true,
         "distance": 100,
         "color": "#ffffff",
         "opacity": 0.5,
@@ -62,9 +62,9 @@
       "move": {
         "enable": true,
         "speed": 5,
-        "direction": "top-right",
-        "random": false,
-        "straight": true,
+        "direction": "middle",
+        "random": true,
+        "straight": false,
         "out_mode": "out",
         "bounce": false,
         "attract": {
