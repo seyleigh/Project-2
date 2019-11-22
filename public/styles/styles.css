@@ -22,10 +22,15 @@ body {
   padding-top: 5%;
 }
 
+.btn {
+  border: none;
+}
 
 
 .btn:hover {
   background: linear-gradient( 222deg, #16222A, #3A6073);
+  border: none;
+  color: white;
 }
 
 
