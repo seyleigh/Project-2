@@ -1,8 +1,83 @@
-.list-group-item {
-  line-height: 2.5;
+html {
+  height: 100%;
 }
+
 
 #map {
   width: 500px;
   height: 500px;
+
+body {
+  background-image: url("../images/AstroSelfie1.png");
+  background-size: 100%;
+  cursor: grab;
+  height: 100%;
+  /* background: #2e2e2e;  */
+  /* background: linear-gradient( 222deg, #16222A, #3A6073); */
+  /* background-repeat: no-repeat;
+  background-size: cover; */
+}
+
+.card {
+  border-radius: 0;
+  background:linear-gradient( 222deg, #8e9eab, #eef2f3);
+  border: none;
+  margin-top: 50%; 
+  height: 15em;
+  padding-top: 5%;
+}
+
+.btn-light {
+  border: none;
+}
+
+
+.btn:hover {
+  background: linear-gradient( 222deg, #16222A, #3A6073);
+  border: none;
+  color: white;
+}
+
+
+header {
+  /* background-image: url("../images/AstroSelfie1.png"); */
+  /* background-size: 100%; */
+  cursor: grab;
+  height: 93vh;
+}
+.header-text {
+  line-height: 1.3em;
+  font-size: 2em;
+  font-weight: 800;
+}
+.header-section {
+  position: static;
+  z-index: 100;
+}
+.header-wrapper {
+  cursor: default;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  margin-left: 25%;
+  color: #fff;
+}
+/* #particles-js{
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+}
+#particles-js2{
+  width: 100vw;
+  position: absolute;
+  background: transparent;
+  z-index: 3;
+} */
+/* .groupies {
+  margin-top: 4%;
+  margin-left: 36%;
+} */
+a:hover, strong:hover {
+  text-decoration: none;
+  color: black;
 }

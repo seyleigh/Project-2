@@ -5,44 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Welcome</title>
 </head>
 <style>
-    header {
-    cursor: grab;
     
-    height: 100vh;
-}
-.header-text {
-    /* padding: 2%; */
-    line-height: 1.3em;
-    font-size: 2em;
-    font-weight: 800;
-}
-/* .header-icons i {
-    margin-top: 10%;
-    padding: .5%;
-    font-size: 30px;
-    color: #fff;
-} */
-
-.header-wrapper {
-    cursor: default;
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    margin-left: 25%;
-    /* color: #fff; */
-}
-
 </style>
 <body>
+    
     <header id="particles-js" class="header d-flex justify-content-center">
 
-        <div class="d-flex align-items-center">
+        <div class="header-section d-flex align-items-center">
             <div class='header-wrapper d-flex justify-content-center text-center'>
                 <div class="d-flex align-items-center text-center row">
-                    <div class="header-text col-12 animated fadeInDown slow delay-1s"> <!-- For Text -->
+                    <div class="header-text col-12 "> <!-- For Text -->
                         <form>
                             <div class="form-group">
                                 <label for="formGroupExampleInput">Username</label>
@@ -53,7 +29,7 @@
                                 <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="********">
                             </div>
                         </form>
-                        <button id="submit" type="submit" class="btn btn-dark mt-5">Submit</button>
+                        <button id="submit" type="submit" class="btn btn-light mt-5">Submit</button>
                     </div>
                     
                         
@@ -62,18 +38,18 @@
         </div>
                           
     </header>
-    
-        <div class="container d-flex justify-content-around">
+        <!-- <div id="particles-js2"></div> -->
+        <div class="groupies d-flex justify-space-between float-right mr-4 mt-5">
             <p>
-                <a href="https://github.com/seyleigh" target="_blank"> <strong> Jensey Fifer</strong></a>
-                <a href="https://github.com/matt-wilson78" target="_blank" class="ml-2"> <strong> Matt Wilson</strong></a>
-                <a href="https://github.com/Ieapplekamp" target="_blank" class="ml-2"> <strong> Ian Applekamp</strong></a>
-                <a href="https://github.com/HoveringTorso" target="_blank" class="ml-2"> <strong> Jake Cambell</strong></a>
+                <a href="https://github.com/seyleigh" target="_blank" class="text-muted"> <strong> Jensey Fifer</strong></a>
+                <a href="https://github.com/matt-wilson78" target="_blank" class="ml-2 text-muted"> <strong> Matt Wilson</strong></a>
+                <a href="https://github.com/Ieapplekamp" target="_blank" class="ml-2 text-muted"> <strong> Ian Applekamp</strong></a>
+                <a href="https://github.com/HoveringTorso" target="_blank" class="ml-2 text-muted"> <strong> Jake Cambell</strong></a>
                 
             </p>
         </div>
     
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" type="text/javascript"></script>
-<script src="/public/js/app.js" type="text/javascript"></script> 
+<script src="./js/app.js" type="text/javascript"></script> 
 </body>
 </html>
