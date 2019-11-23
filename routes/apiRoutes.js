@@ -10,9 +10,19 @@ module.exports = function(app) {
 
   // Create a new Haunted Place report
   app.post("/api/haunteds", function(req, res) {
-    db.haunted_places.create(req.body).then(function(dbHaunteds) {
-      res.json(dbHaunteds);
-    });
+    console.log(req.body);
+    db.haunted_places
+      .create({
+        city: req.body.city,
+        description: req.body.description,
+        location: req.body.location,
+        state_abbrev: req.body.state_abbrev,
+        longitude: req.body.longitude,
+        latitude: req.body.latitude
+      })
+      .then(function(dbHaunteds) {
+        res.json(dbHaunteds);
+      });
   });
 
   // Delete a Haunted Place report by id
@@ -26,22 +36,36 @@ module.exports = function(app) {
 
   // Get all UFO reports
   app.get("/api/ufos", function(req, res) {
-    db.Ufo.findAll({}).then(function(dbUfos) {
+    db.nuforc_reports.findAll({}).then(function(dbUfos) {
       res.json(dbUfos);
     });
   });
 
   // Create a new UFO report
   app.post("/api/ufos", function(req, res) {
-    db.Ufo.create(req.body).then(function(dbUfos) {
-      res.json(dbUfos);
-    });
+    db.nuforc_reports
+      .create({
+        summary: req.body.summary,
+        city: req.body.city,
+        state: req.body.state,
+        shape: req.body.shape,
+        duration: req.body.duration,
+        stats: req.body.stats,
+        text: req.body.stats,
+        city_latitude: req.body.city_latitude,
+        city_longitude: req.body.city_longitude
+      })
+      .then(function(dbUfos) {
+        res.json(dbUfos);
+      });
   });
 
   // Delete a UFO report by id
   app.delete("/api/ufos/:id", function(req, res) {
-    db.Ufo.destroy({ where: { id: req.params.id } }).then(function(dbUfos) {
-      res.json(dbUfos);
-    });
+    db.nuforc_reports
+      .destroy({ where: { id: req.params.id } })
+      .then(function(dbUfos) {
+        res.json(dbUfos);
+      });
   });
 };
