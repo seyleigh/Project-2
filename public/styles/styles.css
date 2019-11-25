@@ -45,7 +45,7 @@ body {
 header {
   /* background-image: url("../images/AstroSelfie1.png"); */
   /* background-size: 100%; */
-  cursor: grab;
+  /* cursor: grab; */
   height: 93vh;
 }
 .header-text {
@@ -64,6 +64,9 @@ header {
   height: 50%;
   margin-left: 25%;
   color: #fff;
+}
+#particles-js {
+  cursor: grab;
 }
 /* #particles-js{
   position: fixed;

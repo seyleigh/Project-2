@@ -6,7 +6,7 @@
         "value": 10,
         "density": {
           "enable": false,
-          "value_area": 1500
+          "value_area": 100
         }
       },
   
