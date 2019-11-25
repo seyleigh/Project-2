@@ -1,26 +1,30 @@
 html {
   height: 100%;
+  /* background-color: #000; */
 }
 
 
 #map {
   width: 500px;
   height: 500px;
+}
 
 body {
   background-image: url("../images/AstroSelfie1.png");
   background-size: 100%;
-  cursor: grab;
   height: 100%;
-  /* background: #2e2e2e;  */
-  /* background: linear-gradient( 222deg, #16222A, #3A6073); */
-  /* background-repeat: no-repeat;
-  background-size: cover; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#particles-js {
+  cursor: grab;
 }
 
 .card {
   border-radius: 0;
-  background:linear-gradient( 222deg, #8e9eab, #eef2f3);
+  background:linear-gradient( 222deg, rgba(142, 158, 171, .8), rgba(238, 242, 243, .8));
   border: none;
   margin-top: 50%; 
   height: 15em;
@@ -30,7 +34,6 @@ body {
 .btn-light {
   border: none;
 }
-
 
 .btn:hover {
   background: linear-gradient( 222deg, #16222A, #3A6073);
@@ -42,7 +45,7 @@ body {
 header {
   /* background-image: url("../images/AstroSelfie1.png"); */
   /* background-size: 100%; */
-  cursor: grab;
+  /* cursor: grab; */
   height: 93vh;
 }
 .header-text {
@@ -62,6 +65,9 @@ header {
   margin-left: 25%;
   color: #fff;
 }
+#particles-js {
+  cursor: grab;
+}
 /* #particles-js{
   position: fixed;
   z-index: -1;
@@ -73,11 +79,89 @@ header {
   background: transparent;
   z-index: 3;
 } */
-/* .groupies {
-  margin-top: 4%;
-  margin-left: 36%;
-} */
+.groupies {
+  margin-top:2%;
+  margin-left: 66%;
+}
 a:hover, strong:hover {
   text-decoration: none;
-  color: black;
+  color: #6cd829;
+}
+
+#home { 
+  background: url(../images/A&ARacingDark.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+#notfound { 
+  /* background: rgb(17, 17, 17); */
+  background: url(../images/astronaut-space-drawing-artwork-monochrome-planet-1618153-wallhere.com.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+img {
+  height: 30rem;
+}
+
+#error {
+  background-image: radial-gradient(rgba(190, 225, 247, 0.742), rgba(194, 204, 220, 0.797), rgba(106, 132, 164, 0.311), rgba(181,194,226,.0), rgba(163,194,229,.0));
+  padding: 12rem;
+  /* margin-top: 3rem; */
+}
+
+h2 , h4 {
+  font-size: 5rem;
+}
+
+.credit {
+  color: #16222A;
+}
+
+
+@media only screen and (max-width: 600px) {
+  /* html{
+    background-color: black;
+  } */
+  .index, #home {
+    background:linear-gradient( 160deg,#434343, #000000 );
+    background-size: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  h4 {
+    font-size: 3rem;
+  }
+
+  h2{
+    font-size: 1.8rem;
+  }
+
+  #error {
+    /* margin-top:60%; */
+    padding: 7rem;
+  }
+
+  .groupies {
+    margin-left: 9%;
+    font-size: .7rem;
+    margin-bottom: 10%;
+  }
+
+  .card1 {
+    margin-top: 32%;
+  }
+
+  .card {
+    margin-top: 10%;
+  }
 }
