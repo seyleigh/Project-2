@@ -9,3 +9,4 @@ module.exports = function(sequelize, DataTypes) {
   });
   return haunted_places;
 };
+
