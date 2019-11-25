@@ -11,7 +11,7 @@ html {
 body {
   background-image: url("../images/AstroSelfie1.png");
   background-size: 100%;
-  cursor: grab;
+  /* cursor: grab; */
   height: 100%;
   /* background: #2e2e2e;  */
   /* background: linear-gradient( 222deg, #16222A, #3A6073); */
@@ -42,7 +42,7 @@ body {
 header {
   /* background-image: url("../images/AstroSelfie1.png"); */
   /* background-size: 100%; */
-  cursor: grab;
+  /* cursor: grab; */
   height: 93vh;
 }
 .header-text {
@@ -61,6 +61,9 @@ header {
   height: 50%;
   margin-left: 25%;
   color: #fff;
+}
+#particles-js {
+  cursor: grab;
 }
 /* #particles-js{
   position: fixed;
