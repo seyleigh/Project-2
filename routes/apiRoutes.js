@@ -28,7 +28,11 @@ module.exports = function(app) {
   // Delete a Haunted Place report by id
   app.delete("/api/haunteds/:id", function(req, res) {
     db.haunted_places
-      .destroy({ where: { id: req.params.id } })
+      .destroy({
+        where: {
+          id: req.params.id
+        }
+      })
       .then(function(dbHaunteds) {
         res.json(dbHaunteds);
       });
@@ -45,12 +49,10 @@ module.exports = function(app) {
   app.post("/api/ufos", function(req, res) {
     db.nuforc_reports
       .create({
-        summary: req.body.summary,
         city: req.body.city,
         state: req.body.state,
         shape: req.body.shape,
         duration: req.body.duration,
-        stats: req.body.stats,
         text: req.body.stats,
         city_latitude: req.body.city_latitude,
         city_longitude: req.body.city_longitude
@@ -63,7 +65,11 @@ module.exports = function(app) {
   // Delete a UFO report by id
   app.delete("/api/ufos/:id", function(req, res) {
     db.nuforc_reports
-      .destroy({ where: { id: req.params.id } })
+      .destroy({
+        where: {
+          id: req.params.id
+        }
+      })
       .then(function(dbUfos) {
         res.json(dbUfos);
       });
