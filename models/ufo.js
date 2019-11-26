@@ -12,3 +12,4 @@ module.exports = function(sequelize, DataTypes) {
   });
   return nuforc_reports;
 };
+
