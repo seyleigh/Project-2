@@ -1,13 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>UFOs</title>
-  </head>
 
-  <body>
-    <div class="container"></div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>UFOs</title>
+</head>
+
+<body>
+  <div class="container">
+    <p>Hi</p>
+    <div id="map">
+    </div>
+  </div>
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyCv8rR6gVZlTbmou0Xd4-XrQ5dU90Btwig">
+  </script>
+
+  <script type="text/javascript">
+    function initialize() {
+      // Setup map and options
+      var map = new google.maps.Map(document.getElementById("map_canvas"), {
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+      // Get the Json file data
+      $.getJSON("locations.json", function (data) {
+        // Loop through the data
+        $.each(data, function (key, data) {
+          var myLatlng = new google.maps.LatLng(data.lat, data.lng); // set position
+          // Add marker to map
+          var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+          });
+          // Set info window content
+          var infoContent = '<strong>' + data.name + '</strong>';
+          infoContent += '<p>' + data.address + '</p>';
+          // Add info window
+          marker.info = new google.maps.InfoWindow({
+            content: infoContent
+          });
+          // Add listener for info window
+          google.maps.event.addListener(marker, 'click', function () {
+            marker.info.open(map, marker);
+          });
+          // Add marker location to loc var
+          var loc = new google.maps.LatLng(marker.position.lat(), marker.position.lng());
+          // extend bounds with loc
+          bounds.extend(loc);
+        });
+      });
+      var bounds = new google.maps.LatLngBounds();
+      map.fitBounds(bounds); // auto zoom
+      map.panToBounds(bounds); // auto center
+    }
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      initialize(); // init map
+    });
+  </script>
+</body>
+
 </html>
