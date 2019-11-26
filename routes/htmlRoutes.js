@@ -1,11 +1,34 @@
 var db = require("../models");
 var path = require("path");
+var isAuthenticated = require("../config/middleware/isAuthenticated");
 
-module.exports = function(app) {
-  // root route loads index.html page (to prompt login)
+module.exports = function (app) {
   app.get("/", function(req, res) {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      res.redirect("/home");
+    }
+    res.sendFile(path.join(__dirname, "../public/home.html"));
+  });
+
+  app.get("/login", function(req, res) {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      res.redirect("/home");
+    }
+    res.sendFile(path.join(__dirname, "../public/login.html"));
+  });
+
+  // Here we've add our isAuthenticated middleware to this route.
+  // If a user who is not logged in tries to access this route they will be redirected to the signup page
+  app.get("/index", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
+
+  // root route loads index.html page (to prompt login)
+  // app.get("/", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/index.html"));
+  // });
 
   // home route loads home page
   app.get("/home", function(req, res) {
