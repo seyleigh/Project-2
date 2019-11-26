@@ -1,7 +1,7 @@
 var db = require("../models");
 var passport = require("../config/passport");
 
-module.exports = function (app) {
+module.exports = function(app) {
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
     res.json(req.user);
   });
@@ -42,12 +42,23 @@ module.exports = function (app) {
       });
     }
   });
-  
+
   // Get all Haunted Place reports
   app.get("/api/haunteds", function(req, res) {
     db.haunted_places.findAll({}).then(function(dbHaunteds) {
       res.json(dbHaunteds);
     });
+  });
+
+  // Get location data for Haunted Places map
+  app.get("/api/haunteds", function(req, res) {
+    db.haunted_places
+      .findAll({
+        attributes: ["latitude", "longitude"]
+      })
+      .then(function(dbUfos) {
+        res.json(dbUfos);
+      });
   });
 
   // Create a new Haunted Place report
@@ -85,6 +96,17 @@ module.exports = function (app) {
     db.nuforc_reports.findAll({}).then(function(dbUfos) {
       res.json(dbUfos);
     });
+  });
+
+  // Get location data for UFO map
+  app.get("/api/ufos", function(req, res) {
+    db.nuforc_reports
+      .findAll({
+        attributes: ["city_latitude", "city_longitude"]
+      })
+      .then(function(dbUfos) {
+        res.json(dbUfos);
+      });
   });
 
   // Create a new UFO report
