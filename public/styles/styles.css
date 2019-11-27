@@ -16,10 +16,14 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
 
-#particles-js {
-  cursor: grab;
+.login-link {
+  color: black;
+}
+.p-login-link {
+  font-family: 'Orbitron', sans-serif;
 }
 
 .card {
@@ -43,13 +47,14 @@ body {
 
 
 header {
+  font-family: 'Orbitron', sans-serif;
   /* background-image: url("../images/AstroSelfie1.png"); */
   /* background-size: 100%; */
   /* cursor: grab; */
-  height: 93vh;
+  height: 95vh;
 }
 .header-text {
-  line-height: 1.3em;
+  /* line-height: 1.3em; */
   font-size: 2em;
   font-weight: 800;
 }
@@ -61,27 +66,18 @@ header {
   cursor: default;
   position: absolute;
   width: 50%;
-  height: 50%;
+  /* height: 65%; */
   margin-left: 25%;
   color: #fff;
 }
 #particles-js {
   cursor: grab;
 }
-/* #particles-js{
-  position: fixed;
-  z-index: -1;
-  width: 100vw;
-}
-#particles-js2{
-  width: 100vw;
-  position: absolute;
-  background: transparent;
-  z-index: 3;
-} */
+
 .groupies {
-  margin-top:2%;
-  margin-left: 66%;
+  font-family: 'Orbitron', sans-serif;
+  /* margin-top:2%; */
+  margin-left: 60%;
 }
 a:hover, strong:hover {
   text-decoration: none;
@@ -151,10 +147,15 @@ h2 , h4 {
     padding: 7rem;
   }
 
-  .groupies {
-    margin-left: 9%;
+  .p-login-link, .groupies {
+    padding-top: 3%;
+    margin-left: 3%;
+    text-align: center;
     font-size: .7rem;
     margin-bottom: 10%;
+  }
+  .login-link {
+    color: white;
   }
 
   .card1 {
