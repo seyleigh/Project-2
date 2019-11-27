@@ -4,7 +4,7 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function (app) {
   app.get("/", function(req, res) {
-    // If the user already has an account send them to the members page
+    // If the user already has an account send them to the home page
     if (req.user) {
       res.redirect("/home");
     }
@@ -36,17 +36,17 @@ module.exports = function (app) {
   });
 
   // ufos route loads ufos.html page
-  app.get("/ufos", function(req, res) {
+  app.get("/ufos", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/ufos.html"));
   });
 
   // hauntings route loads hauntings.html page
-  app.get("/hauntings", function(req, res) {
+  app.get("/hauntings", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/hauntings.html"));
   });
 
   // maps route loads search-ufo-haunts.html page
-  app.get("/maps", function(req, res) {
+  app.get("/maps", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/search-ufo-haunts.html"));
   });
 
