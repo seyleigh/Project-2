@@ -18,16 +18,20 @@ body {
   background-size: cover;
   
 }
+.projectName {
+  font-size: 3.3rem;
+  color: #00ff80;
+}
 
 .login-link {
-  color: black;
+  color: #000;
 }
 .p-login-link {
   font-family: 'Orbitron', sans-serif;
 }
 .log-out-link {
   margin-top: 10%;
-  color: rgb(45, 71, 88);
+  color: #00ff80;
 }
 
 
@@ -48,7 +52,7 @@ body {
 .btn:hover {
   background: linear-gradient( 222deg, #16222A, #3A6073);
   border: none;
-  color: white;
+  color: #fff;
 }
 
 
@@ -60,8 +64,8 @@ header {
   height: 95vh;
 }
 .header-text {
-  /* line-height: 1.3em; */
-  font-size: 2em;
+  line-height: 3.7rem;
+  font-size: 1.7em;
   font-weight: 800;
 }
 .header-section {
@@ -76,6 +80,7 @@ header {
   margin-left: 25%;
   color: #fff;
 }
+
 #particles-js {
   cursor: grab;
 }
@@ -87,7 +92,7 @@ header {
 }
 a:hover, strong:hover {
   text-decoration: none;
-  color: #6cd829;
+  color: #00ff80;
 }
 
 #home { 
@@ -131,8 +136,20 @@ h2 , h4 {
     margin-top: 7%;
   }
   .groupies {
-    font-size: .9em;
+    font-size: .9rem;
     margin-left: 50%;
+  }
+}
+@media only screen and (max-width: 779px) {
+  .header-text {
+    line-height: 2.8rem;
+    font-size: 1.5rem;
+  }
+  .projectName {
+    font-size: 2.5rem;
+  }
+  .groupies {
+    font-size: .7rem;
   }
 }
 
@@ -175,6 +192,14 @@ h2 , h4 {
   }
   .log-out-link {
     margin-top: 1%;
+  }
+
+  .header-text {
+    line-height: 2rem;
+    font-size: 1rem;
+  }
+  .projectName {
+    font-size: 2rem;
   }
 
   /* .card {
