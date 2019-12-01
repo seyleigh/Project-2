@@ -41,7 +41,7 @@
       },
   
       "size": {
-        "value": 25,
+        "value": 13,
         "random": false,
         "anim": {
           "enable": false,
@@ -81,7 +81,7 @@
   
       "events": {
         "onhover": {
-          "enable": false,
+          "enable": true,
           "mode": "repulse"
         },
         "onclick": {
@@ -106,7 +106,7 @@
           "speed": 3
         },
         "repulse": {
-          "distance": 150,
+          "distance": 100,
           "duration": 0.1
         }
       }
