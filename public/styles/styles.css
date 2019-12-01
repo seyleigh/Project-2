@@ -30,7 +30,7 @@ body {
   font-family: 'Orbitron', sans-serif;
 }
 .log-out-link {
-  margin-top: 10%;
+  margin-top: 3%;
   color: #00ff80;
 }
 
@@ -84,6 +84,10 @@ header {
 #particles-js {
   cursor: grab;
 }
+#particle-js2 {
+  height: 100%;
+  position: relative;
+}
 
 .groupies {
   /* font-family: 'Orbitron', sans-serif; */
@@ -93,6 +97,10 @@ header {
 a:hover, strong:hover {
   text-decoration: none;
   color: #00ff80;
+}
+
+#home-container {
+  position: absolute;
 }
 
 #home { 
@@ -141,7 +149,7 @@ h2 {
 
 @media only screen and (max-width: 991px) {
   .card {
-    margin-top: 7%;
+    margin-top: 6%;
   }
   .groupies {
     font-size: .9rem;
@@ -152,9 +160,12 @@ h2 {
     font-size: 5rem;
   }
 
-
   h2 {
     font-size: 3rem;
+  }
+
+  #particles-js2 {
+    height: 115vh;
   }
 }
 @media only screen and (max-width: 779px) {
@@ -173,9 +184,16 @@ h2 {
     font-size: 4.5rem;
   }
 
-  
   h2 {
     font-size: 3rem;
+  }
+
+  .log-out-link {
+    margin-top: 0;
+  }
+
+  #particles-js2 {
+    height: 106vh;
   }
 }
 
@@ -212,13 +230,11 @@ h2 {
     font-size: .7rem;
     /* margin-bottom: 10%; */
   }
-
+/* 
   .card1 {
     margin-top: 3.5%;
   }
-  .log-out-link {
-    margin-top: 1%;
-  }
+   */
 
   .header-text {
     line-height: 2rem;
