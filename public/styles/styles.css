@@ -26,7 +26,7 @@ body {
 .login-link {
   color: #000;
 }
-.p-login-link {
+.p-login-link, .groupies, header, h4, h2 {
   font-family: 'Orbitron', sans-serif;
 }
 .log-out-link {
@@ -57,7 +57,7 @@ body {
 
 
 header {
-  font-family: 'Orbitron', sans-serif;
+  /* font-family: 'Orbitron', sans-serif; */
   /* background-image: url("../images/AstroSelfie1.png"); */
   /* background-size: 100%; */
   /* cursor: grab; */
@@ -86,7 +86,7 @@ header {
 }
 
 .groupies {
-  font-family: 'Orbitron', sans-serif;
+  /* font-family: 'Orbitron', sans-serif; */
   /* margin-top:2%; */
   margin-left: 60%;
 }
@@ -101,6 +101,8 @@ a:hover, strong:hover {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1.1px;
 }
 
 
@@ -118,13 +120,19 @@ img {
 }
 
 #error {
-  background-image: radial-gradient(rgba(190, 225, 247, 0.742), rgba(194, 204, 220, 0.797), rgba(106, 132, 164, 0.311), rgba(181,194,226,.0), rgba(163,194,229,.0));
-  padding: 12rem;
-  /* margin-top: 3rem; */
+  background-image: radial-gradient(rgba(190, 225, 247, 0.835), rgba(194, 204, 220, 0.797), rgba(102, 109, 117, 0.5), rgba(181,194,226,.0), rgba(163,194,229,.0));
+ padding: 12rem; 
+  margin-top: 13rem;
 }
 
-h2 , h4 {
+h4 {
+  font-size: 6rem;
+  text-shadow: 2px 3px #00ff80;
+}
+
+h2 {
   font-size: 5rem;
+  text-shadow: 2px 3px #00ff80;
 }
 
 .credit {
@@ -139,6 +147,15 @@ h2 , h4 {
     font-size: .9rem;
     margin-left: 50%;
   }
+
+  h4 {
+    font-size: 5rem;
+  }
+
+
+  h2 {
+    font-size: 3rem;
+  }
 }
 @media only screen and (max-width: 779px) {
   .header-text {
@@ -150,6 +167,15 @@ h2 , h4 {
   }
   .groupies {
     font-size: .7rem;
+  }
+
+  h4 {
+    font-size: 4.5rem;
+  }
+
+  
+  h2 {
+    font-size: 3rem;
   }
 }
 
@@ -167,11 +193,11 @@ h2 , h4 {
   }
 
   h4 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   h2{
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   #error {
