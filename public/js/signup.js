@@ -37,7 +37,7 @@ $(document).ready(function() {
     }
   
     function handleLoginErr(err) {
-      $("#alert .msg").text(err.responseJSON);
+      $("#alert .msg").text(err.statusText + ": Username/Password already exists!");
       $("#alert").fadeIn(500);
     }
   });
