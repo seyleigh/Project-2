@@ -34,7 +34,7 @@ $(document).ready(function() {
         // If there's an error, log the error
       })
       .catch(function(err) {
-        $("#alert").css("color", "#ff2b2b");
+        $("#alert .msg").text(err.statusText + ": Incorrect Password or Username!");
         $("#alert").fadeIn(500);
       });
   }
