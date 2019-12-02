@@ -16,6 +16,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'Orbitron', sans-serif;
   
 }
 .projectName {
@@ -41,6 +42,16 @@ body {
   border: none;
   margin-top: 40%; 
   height: 15em;
+  padding-top: 5%;
+  margin-bottom: 5%;
+}
+
+.card-like {
+  border-radius: 0;
+  background:linear-gradient( 222deg, rgba(142, 158, 171, .8), rgba(238, 242, 243, .8));
+  border: none;
+  /* margin-top: 40%;  */
+  height: 20em;
   padding-top: 5%;
   margin-bottom: 5%;
 }
@@ -151,6 +162,19 @@ h2 {
   text-shadow: 2px 1px #00ff80;
 }
 
+.formgroup, label {
+  font-weight: 700;
+}
+
+.ufo-reports-card {
+  font-weight: 500;
+  font-size: 2rem;
+  text-shadow: 2px 1px #00ff80;
+}
+tr {
+  font-size: .77rem;
+}
+
 @media only screen and (max-width: 991px) {
   .card {
     margin-top: 6%;
@@ -248,7 +272,9 @@ h2 {
     font-size: 2rem;
   }
 
-  /* .card {
-    margin-top: 10%;
-  } */
+  tr {
+    font-size: .73rem;
+  }
+  
+  
 }

@@ -48,7 +48,7 @@ var refreshUfoList = function() {
         $("<td>").text(ufo.state),
         $("<td>").text(ufo.text),
         $("<td>").html(
-          "<button class='btn btn-danger float-right delete'>x</button>"
+          "<button class='btn btn-outline-dark float-right delete'>x</button>"
         )
       );
 
