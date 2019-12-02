@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Something1!",
+    "password": "whoops",
     "database": "cryptids_db",
     "host": "localhost",
     "dialect": "mysql"

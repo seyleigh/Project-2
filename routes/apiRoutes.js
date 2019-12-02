@@ -57,16 +57,17 @@ module.exports = function(app) {
       });
   });
 
-  // Get location data for Haunted Places map
-  app.get("/api/hauntings", function(req, res) {
-    db.haunted_places
-      .findAll({
-        attributes: ["latitude", "longitude"]
-      })
-      .then(function(dbUfos) {
-        res.json(dbUfos);
-      });
-  });
+  // @TODO - map functionality incomplete
+  // // Get location data for Haunted Places map
+  // app.get("/api/hauntings", function(req, res) {
+  //   db.haunted_places
+  //     .findAll({
+  //       attributes: ["latitude", "longitude"]
+  //     })
+  //     .then(function(dbUfos) {
+  //       res.json(dbUfos);
+  //     });
+  // });
 
   // Create a new Haunted Place report
   app.post("/api/hauntings", function(req, res) {
@@ -110,16 +111,17 @@ module.exports = function(app) {
       });
   });
 
-  // Get location data for UFO map
-  app.get("/api/ufos", function(req, res) {
-    db.nuforc_reports
-      .findAll({
-        attributes: ["city_latitude", "city_longitude"]
-      })
-      .then(function(dbUfos) {
-        res.json(dbUfos);
-      });
-  });
+  // @TODO - map functionality incomplete
+  // // Get location data for UFO map
+  // app.get("/api/ufos", function(req, res) {
+  //   db.nuforc_reports
+  //     .findAll({
+  //       attributes: ["city_latitude", "city_longitude"]
+  //     })
+  //     .then(function(dbUfos) {
+  //       res.json(dbUfos);
+  //     });
+  // });
 
   // Create a new UFO report
   app.post("/api/ufos", function(req, res) {
