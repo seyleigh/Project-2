@@ -106,7 +106,9 @@ var handleFormSubmit = function(event) {
       ufo.city_longitude
     )
   ) {
-    alert("Please complete all fields before submitting UFO report");
+    swal("Please complete all fields before submitting UFO report", {
+      button: false
+    });
     return;
   }
 
