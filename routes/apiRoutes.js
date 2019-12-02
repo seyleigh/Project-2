@@ -44,14 +44,14 @@ module.exports = function(app) {
   });
 
   // Get all Haunted Place reports
-  app.get("/api/haunteds", function(req, res) {
+  app.get("/api/hauntings", function(req, res) {
     db.haunted_places.findAll({}).then(function(dbHaunteds) {
       res.json(dbHaunteds);
     });
   });
 
   // Get location data for Haunted Places map
-  app.get("/api/haunteds", function(req, res) {
+  app.get("/api/hauntings", function(req, res) {
     db.haunted_places
       .findAll({
         attributes: ["latitude", "longitude"]
@@ -62,7 +62,7 @@ module.exports = function(app) {
   });
 
   // Create a new Haunted Place report
-  app.post("/api/haunteds", function(req, res) {
+  app.post("/api/hauntings", function(req, res) {
     console.log(req.body);
     db.haunted_places
       .create({
@@ -79,7 +79,7 @@ module.exports = function(app) {
   });
 
   // Delete a Haunted Place report by id
-  app.delete("/api/haunteds/:id", function(req, res) {
+  app.delete("/api/hauntings/:id", function(req, res) {
     db.haunted_places
       .destroy({
         where: {

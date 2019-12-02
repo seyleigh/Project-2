@@ -49,11 +49,11 @@ var refreshHauntingList = function() {
       );
 
       newRow.attr({
-        "data-id": haunting.id
+        "data-id": hauntings.id
       });
 
       // Append the new row to the table
-      $("#hauntingsTable tbody").append(newRow);
+      $("#hauntings-table tbody").append(newRow);
 
       return newRow;
 
@@ -71,8 +71,8 @@ var refreshHauntingList = function() {
       //   return $li;
     });
 
-    $("#ufo-table tbody").empty();
-    $("#ufo-table tbody").append($hauntings);
+    $("#hauntings-table tbody").empty();
+    $("#hauntings-table tbody").append($hauntings);
   });
 };
 
