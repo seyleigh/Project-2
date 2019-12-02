@@ -110,7 +110,7 @@ header {
   /* margin-top:2%; */
   margin-left: 60%;
 }
-a:hover, strong:hover {
+a:hover, strong:hover, .ufoz:hover {
   text-decoration: none;
   color: #00ff80;
 }
@@ -197,6 +197,10 @@ h2 {
 }
 tr {
   font-size: .77rem;
+}
+
+.ufoz {
+  color: #fff;
 }
 
 #hauntings-table, #ufo-table {
