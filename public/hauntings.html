@@ -14,23 +14,22 @@
   <title>Hauntings</title>
 </head>
 
-<body>
+<body id="haunt">
   <div class="container-fluid">
-    <div class="card-like">
-      <h4 class="text-center">Haunted Places</h4>
-      <hr />
-      <h3 class="text-center mt-5">View and Submit Reports of Hauntings</h3>
-    </div>
-
+    <div class="card-like haunty">
+        <h4 class="text-center">Haunted Places</h4>
+        <hr />
+        <h3 class="text-center mt-5 text-white">View and Submit Reports of Hauntings</h3>
+   </div>
     <div class="row">
       <div class="col-lg-12">
         <!-- Current Haunting reports in database -->
         <div class="card" style="margin-top:auto;padding-top:0;height:auto;">
-          <div class="card-header">
+          <div class="card-header haunty">
             <span class="haunt-card">Haunted Places</span>
           </div>
-          <div class="card-body">
-            <table class="table" id="hauntings-table">
+          <div class="card-body haunty">
+            <table class="table text-white" id="hauntings-table">
               <thead>
                 <tr>
                   <th scope="col">City</th>
@@ -52,28 +51,28 @@
       <div class="col-lg-12">
         <!-- Form for submitting new reports to the database -->
         <div class="card" style="margin-top:auto;padding-top:0;height:auto;">
-          <div class="card-header">
+          <div class="card-header haunty">
             <span class="haunt-card">Submit a New Haunting Report</span>
           </div>
-          <div class="card-body">
+          <div class="card-body haunty">
             <form role="form">
-              <div class="form-group">
+              <div class="form-group text-white">
                 <label for="haunting-text">Description of Haunting</label>
                 <input type="text" class="form-control" id="haunting-text" />
               </div>
-              <div class="form-group">
+              <div class="form-group text-white">
                 <label for="haunting-city">City</label>
                 <input type="text" class="form-control" id="haunting-city" />
               </div>
-              <div class="form-group">
+              <div class="form-group text-white">
                 <label for="haunting-state">State</label>
                 <input type="text" class="form-control" id="haunting-state" />
               </div>
-              <div class="form-group">
+              <div class="form-group text-white">
                 <label for="haunting-location">Location Within City</label>
                 <input type="text" class="form-control" id="haunting-location" />
               </div>
-              <button type="submit" class="btn btn-outline-dark submit" id="submit-haunting">
+              <button type="submit" class="btn btn-outline-light submit" id="submit-haunting">
                 Submit
               </button>
             </form>
@@ -82,16 +81,17 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-12">
-        <!-- Card for displaying map -->
-        <div class="card" style="margin-top:auto;padding-top:0;height:auto;">
-          <div class="card-header">
-            <span class="haunt-card">Hauntings Map</span>
-          </div>
-          <div class="card-body text-center">
-            <p class="text-center">Map (would) go here</p>
-
-            <img class="img-fluid" src="./images/Boo.png">
+        <div class="col-lg-12">
+          <!-- Card for displaying map -->
+          <div class="card" style="margin-top:auto;padding-top:0;height:auto;">
+            <div class="card-header haunty">
+              <span class="haunt-card">Hauntings Map</span>
+            </div>
+            <div class="card-body text-center haunty">
+              <p class="text-center text-white">Map (would) go here</p>
+              
+              <img class="img-fluid" src="./images/Boo.png">
+            </div>
           </div>
         </div>
       </div>

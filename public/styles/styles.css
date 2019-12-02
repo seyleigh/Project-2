@@ -66,6 +66,11 @@ body {
   color: #fff;
 }
 
+.haunty {
+
+  background:linear-gradient( 222deg, rgba(0, 0, 0, .8), rgba(67, 67, 67, .8 )) ; 
+}
+
 
 header {
   /* font-family: 'Orbitron', sans-serif; */
@@ -134,16 +139,22 @@ a:hover, strong:hover {
   background-size: cover;
 }
 
-#h-map{
-  background: url(../images/Boo.png) no-repeat center center fixed; 
+
+#haunt {
+  background: url(../images/scaryhands.jpeg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
-.img-fluid {
-  height: 20rem;
+#bigBoyUfos {
+  background: url(../images/PacMan.jpg) no-repeat center center fixed; 
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 #error {
@@ -288,7 +299,8 @@ tr {
   tr {
     font-size: .65rem;
   }
-  .table td {
+
+  .table td, .table th {
     padding: none;
   }
   
