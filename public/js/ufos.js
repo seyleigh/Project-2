@@ -4,14 +4,12 @@ var $ufoShape = $("#ufo-shape");
 var $ufoDuration = $("#ufo-duration");
 var $ufoCity = $("#ufo-city");
 var $ufoState = $("#ufo-state");
-var $ufoLatitude = $("#ufo-latitude");
-var $ufoLongitude = $("#ufo-longitude");
 var $submitBtn = $("#submit");
 var $ufoTable = $("#ufo-table");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
-  saveUfo: function(ufo) {
+  saveUfo: function (ufo) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
@@ -21,13 +19,13 @@ var API = {
       data: JSON.stringify(ufo)
     });
   },
-  getUfos: function() {
+  getUfos: function () {
     return $.ajax({
       url: "api/ufos",
       type: "GET"
     });
   },
-  deleteUfo: function(id) {
+  deleteUfo: function (id) {
     return $.ajax({
       url: "api/ufos/" + id,
       type: "DELETE"
@@ -36,10 +34,10 @@ var API = {
 };
 
 // refreshUfoList gets new UFOs from the db and repopulates the list
-var refreshUfoList = function() {
-  API.getUfos().then(function(data) {
+var refreshUfoList = function () {
+  API.getUfos().then(function (data) {
     console.log(data);
-    var $ufos = data.map(function(ufo) {
+    var $ufos = data.map(function (ufo) {
       // Create the new row
       var newRow = $("<tr>").append(
         $("<td>").text(ufo.shape),
@@ -82,7 +80,7 @@ var refreshUfoList = function() {
 
 // handleFormSubmit is called whenever we submit a new ufo
 // Save the new ufo to the db and refresh the list
-var handleFormSubmit = function(event) {
+var handleFormSubmit = function (event) {
   event.preventDefault();
 
   var ufo = {
@@ -91,8 +89,6 @@ var handleFormSubmit = function(event) {
     duration: $ufoDuration.val().trim(),
     city: $ufoCity.val().trim(),
     state: $ufoState.val().trim(),
-    city_latitude: $ufoLatitude.val().trim(),
-    city_longitude: $ufoLongitude.val().trim()
   };
 
   if (
@@ -101,9 +97,7 @@ var handleFormSubmit = function(event) {
       ufo.shape &&
       ufo.duration &&
       ufo.city &&
-      ufo.state &&
-      ufo.city_latitude &&
-      ufo.city_longitude
+      ufo.state
     )
   ) {
     swal("Please complete all fields before submitting UFO report", {
@@ -112,7 +106,7 @@ var handleFormSubmit = function(event) {
     return;
   }
 
-  API.saveUfo(ufo).then(function() {
+  API.saveUfo(ufo).then(function () {
     refreshUfoList();
   });
 
@@ -121,20 +115,18 @@ var handleFormSubmit = function(event) {
   $ufoDuration.val("");
   $ufoCity.val("");
   $ufoState.val("");
-  $ufoLatitude.val("");
-  $ufoLongitude.val("");
 };
 
 // handleDeleteBtnClick is called when an example's delete button is clicked
 // Remove the example from the db and refresh the list
-var handleDeleteBtnClick = function() {
+var handleDeleteBtnClick = function () {
   console.log("At least handle delete function is getting called");
   var idToDelete = $(this)
     .parent()
     .parent()
     .attr("data-id");
 
-  API.deleteUfo(idToDelete).then(function() {
+  API.deleteUfo(idToDelete).then(function () {
     refreshUfoList();
   });
 };
