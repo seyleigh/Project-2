@@ -199,6 +199,10 @@ tr {
   font-size: .77rem;
 }
 
+#hauntings-table, #ufo-table {
+  letter-spacing: 1.3px;
+}
+
 @media only screen and (max-width: 991px) {
   .card {
     margin-top: 6%;
