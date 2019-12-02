@@ -1,5 +1,6 @@
 var db = require("../models");
 var passport = require("../config/passport");
+var Sequelize = require("sequelize");
 
 module.exports = function(app) {
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
@@ -45,10 +46,15 @@ module.exports = function(app) {
 
   // Get all Haunted Place reports
   app.get("/api/hauntings", function(req, res) {
-    db.haunted_places.findAll({}).then(function(dbHaunteds) {
-      res.json(dbHaunteds);
-      console.log(dbHaunteds);
-    });
+    db.haunted_places
+      .findAll({
+        limit: 10,
+        order: [[Sequelize.fn("RAND", "")]]
+      })
+      .then(function(dbHaunteds) {
+        res.json(dbHaunteds);
+        console.log(dbHaunteds);
+      });
   });
 
   // Get location data for Haunted Places map
@@ -94,9 +100,14 @@ module.exports = function(app) {
 
   // Get all UFO reports
   app.get("/api/ufos", function(req, res) {
-    db.nuforc_reports.findAll({}).then(function(dbUfos) {
-      res.json(dbUfos);
-    });
+    db.nuforc_reports
+      .findAll({
+        limit: 10,
+        order: [[Sequelize.fn("RAND", "")]]
+      })
+      .then(function(dbUfos) {
+        res.json(dbUfos);
+      });
   });
 
   // Get location data for UFO map
