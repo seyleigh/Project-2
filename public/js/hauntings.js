@@ -32,7 +32,7 @@ var API = {
   }
 };
 
-// refreshUfoList gets new Hauntings from the db and repopulates the list
+// refreshHauntingList gets new Hauntings from the db and repopulates the list
 var refreshHauntingList = function() {
   API.getHauntings().then(function(data) {
     console.log(data);
@@ -47,7 +47,7 @@ var refreshHauntingList = function() {
           "<button class='btn btn-outline-light float-right delete'>x</button>"
         )
       );
-
+      // Give the row an id based on the db record's primary key, which we can use later to target this report's record in the db
       newRow.attr({
         "data-id": hauntings.id
       });
@@ -56,28 +56,15 @@ var refreshHauntingList = function() {
       $("#hauntings-table tbody").append(newRow);
 
       return newRow;
-
-      //   var $li = $("<li>").attr({
-      //     class: "list-group-item",
-      //     "data-id": ufo.id
-      //   });
-
-      //   var $button = $("<button>")
-      //     .addClass("btn btn-danger float-right delete")
-      //     .text("ｘ");
-
-      //   $li.append($button);
-
-      //   return $li;
     });
 
+    // Empty and re-populate the table with updated info
     $("#hauntings-table tbody").empty();
     $("#hauntings-table tbody").append($hauntings);
   });
 };
 
 // handleFormSubmit is called whenever we submit a new ufo
-// Save the new ufo to the db and refresh the list
 var handleFormSubmit = function(event) {
   event.preventDefault();
 
@@ -88,6 +75,7 @@ var handleFormSubmit = function(event) {
     state_abbrev: $hauntingState.val().trim()
   };
 
+  // Ensure all input fields are completed before accepting the form submission
   if (
     !(
       haunting.description &&
@@ -102,10 +90,12 @@ var handleFormSubmit = function(event) {
     return;
   }
 
+  // Save the new ufo to the db and refresh the list
   API.saveHaunting(haunting).then(function() {
     refreshHauntingList();
   });
 
+  // Clear the submission form's input fields
   $hauntingText.val("");
   $hauntingCity.val("");
   $hauntingState.val("");
