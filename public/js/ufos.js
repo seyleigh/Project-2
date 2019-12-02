@@ -100,7 +100,9 @@ var handleFormSubmit = function (event) {
       ufo.state
     )
   ) {
-    alert("Please complete all fields before submitting UFO report");
+    swal("Please complete all fields before submitting UFO report", {
+      button: false
+    });
     return;
   }
 
