@@ -279,8 +279,9 @@ tr {
 
   tr {
     font-size: .65rem;
+  }
+  .table td {
     padding: none;
   }
-  
   
 }
