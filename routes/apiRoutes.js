@@ -129,7 +129,7 @@ module.exports = function(app) {
         state: req.body.state,
         shape: req.body.shape,
         duration: req.body.duration,
-        text: req.body.stats,
+        text: req.body.text,
         city_latitude: req.body.city_latitude,
         city_longitude: req.body.city_longitude
       })
