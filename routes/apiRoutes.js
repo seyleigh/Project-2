@@ -49,7 +49,7 @@ module.exports = function(app) {
     db.haunted_places
       .findAll({
         limit: 10,
-        order: [[Sequelize.fn("RAND", "")]]
+        order: [[Sequelize.fn("RAND")]]
       })
       .then(function(dbHaunteds) {
         res.json(dbHaunteds);
@@ -104,7 +104,7 @@ module.exports = function(app) {
     db.nuforc_reports
       .findAll({
         limit: 10,
-        order: [[Sequelize.fn("RAND", "")]]
+        order: [[Sequelize.fn("RAND")]]
       })
       .then(function(dbUfos) {
         res.json(dbUfos);
