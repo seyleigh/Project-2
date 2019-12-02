@@ -128,6 +128,7 @@ module.exports = function(app) {
 
   // Delete a UFO report by id
   app.delete("/api/ufos/:id", function(req, res) {
+    console.log("TCL: req", req);
     db.nuforc_reports
       .destroy({
         where: {
