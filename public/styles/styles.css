@@ -159,7 +159,12 @@ h2 {
 }
 
 .card-title, .card-text {
-  text-shadow: 2px 1px #00ff80;
+  /* font-size: 1.3rem; */
+  text-shadow: 1px 1px #00ff80;
+}
+
+.card-text {
+  font-size: 1.1rem;
 }
 
 .formgroup, label {
@@ -273,7 +278,8 @@ tr {
   }
 
   tr {
-    font-size: .73rem;
+    font-size: .65rem;
+    padding: none;
   }
   
   
