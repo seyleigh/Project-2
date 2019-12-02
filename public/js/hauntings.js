@@ -44,7 +44,7 @@ var refreshHauntingList = function() {
         $("<td>").text(hauntings.location),
         $("<td>").text(hauntings.state_abbrev),
         $("<td>").html(
-          "<button class='btn btn-danger float-right delete'>x</button>"
+          "<button class='btn btn-outline-light float-right delete'>x</button>"
         )
       );
       // Give the row an id based on the db record's primary key, which we can use later to target this report's record in the db

@@ -134,8 +134,16 @@ a:hover, strong:hover {
   background-size: cover;
 }
 
-img {
-  height: 30rem;
+#h-map{
+  background: url(../images/Boo.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.img-fluid {
+  height: 20rem;
 }
 
 #error {
