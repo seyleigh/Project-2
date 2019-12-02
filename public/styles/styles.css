@@ -134,6 +134,13 @@ a:hover, strong:hover {
   background-size: cover;
 }
 
+#bigBoyUfos {
+  background: url(../images/PacMan.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 #error {
   background-image: radial-gradient(rgba(190, 225, 247, 0.493), rgba(194, 204, 220, 0.797), rgba(102, 109, 117, 0.5), rgba(181,194,226,.0), rgba(163,194,229,.0));
