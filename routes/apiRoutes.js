@@ -47,6 +47,7 @@ module.exports = function(app) {
   app.get("/api/hauntings", function(req, res) {
     db.haunted_places.findAll({}).then(function(dbHaunteds) {
       res.json(dbHaunteds);
+      console.log(dbHaunteds);
     });
   });
 
