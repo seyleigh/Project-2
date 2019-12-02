@@ -8,7 +8,7 @@ var $hauntingsTable = $("#hauntings-table");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
-  saveHaunting: function (haunting) {
+  saveHaunting: function(haunting) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
@@ -18,13 +18,13 @@ var API = {
       data: JSON.stringify(haunting)
     });
   },
-  getHauntings: function () {
+  getHauntings: function() {
     return $.ajax({
       url: "api/hauntings",
       type: "GET"
     });
   },
-  deleteHaunting: function (id) {
+  deleteHaunting: function(id) {
     return $.ajax({
       url: "api/hauntings/" + id,
       type: "DELETE"
@@ -34,9 +34,9 @@ var API = {
 
 // refreshUfoList gets new Hauntings from the db and repopulates the list
 var refreshHauntingList = function() {
-  API.getHauntings().then(function (data) {
+  API.getHauntings().then(function(data) {
     console.log(data);
-    var $hauntings = data.map(function (hauntings) {
+    var $hauntings = data.map(function(hauntings) {
       // Create the new row
       var newRow = $("<tr>").append(
         $("<td>").text(hauntings.city),
@@ -96,11 +96,13 @@ var handleFormSubmit = function(event) {
       haunting.state_abbrev
     )
   ) {
-    alert("Please complete all fields before submitting Haunting report");
+    swal("Please complete all fields before submitting a Haunting report", {
+      button: false
+    });
     return;
   }
 
-  API.saveHaunting(haunting).then(function () {
+  API.saveHaunting(haunting).then(function() {
     refreshHauntingList();
   });
 
@@ -119,7 +121,7 @@ var handleDeleteBtnClick = function() {
     .parent()
     .attr("data-id");
 
-  API.deleteHaunting(idToDelete).then(function () {
+  API.deleteHaunting(idToDelete).then(function() {
     refreshHauntingList();
   });
 };

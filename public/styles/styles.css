@@ -166,7 +166,7 @@ h2 {
   font-weight: 700;
 }
 
-.ufo-reports-card {
+.ufo-reports-card, .haunt-card {
   font-weight: 500;
   font-size: 2rem;
   text-shadow: 2px 1px #00ff80;
